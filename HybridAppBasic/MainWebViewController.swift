@@ -29,7 +29,7 @@ class MainWebViewController: BaseViewController {
         print("앱 디바이스 정보 : \(deviceInfo.getDeviceName()!)")
     }
     
-    // 초기 설정 함수
+    // 초기 화면 설정
     func setupViews() {
         // UIView 생성 및 설정
         containerView = UIView()
