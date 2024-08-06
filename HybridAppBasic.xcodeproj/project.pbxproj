@@ -66,9 +66,8 @@
 			children = (
 				878827DF2C6286AD000BE889 /* AppDelegate.swift */,
 				878827E12C6286AD000BE889 /* SceneDelegate.swift */,
-				878827F82C62872C000BE889 /* AppDataManager.swift */,
-				878827F62C6286D9000BE889 /* BaseViewController.swift */,
-				878827E32C6286AD000BE889 /* MainWebViewController.swift */,
+				878827FD2C6290CD000BE889 /* Common */,
+				878827FA2C6290A5000BE889 /* ViewController */,
 				878827E52C6286AD000BE889 /* Main.storyboard */,
 				878827E82C6286AE000BE889 /* Assets.xcassets */,
 				878827EA2C6286AE000BE889 /* LaunchScreen.storyboard */,
@@ -83,6 +82,39 @@
 				878827F42C6286BE000BE889 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		878827FA2C6290A5000BE889 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				878827FB2C6290BD000BE889 /* Base */,
+				878827FC2C6290C2000BE889 /* MainWebView */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		878827FB2C6290BD000BE889 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				878827F62C6286D9000BE889 /* BaseViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		878827FC2C6290C2000BE889 /* MainWebView */ = {
+			isa = PBXGroup;
+			children = (
+				878827E32C6286AD000BE889 /* MainWebViewController.swift */,
+			);
+			name = MainWebView;
+			sourceTree = "<group>";
+		};
+		878827FD2C6290CD000BE889 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				878827F82C62872C000BE889 /* AppDataManager.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
