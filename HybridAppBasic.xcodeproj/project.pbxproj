@@ -16,6 +16,9 @@
 		878827F52C6286BE000BE889 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878827F42C6286BE000BE889 /* WebKit.framework */; };
 		878827F72C6286D9000BE889 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878827F62C6286D9000BE889 /* BaseViewController.swift */; };
 		878827F92C62872C000BE889 /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878827F82C62872C000BE889 /* AppDataManager.swift */; };
+		878F6BF62C6BCF71009CFCBC /* JavaScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6BF52C6BCF71009CFCBC /* JavaScriptManager.swift */; };
+		878F6BF82C6BD11F009CFCBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6BF72C6BD11F009CFCBC /* Constants.swift */; };
+		878F6BFA2C6BD47B009CFCBC /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6BF92C6BD47B009CFCBC /* CommonUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		878827F42C6286BE000BE889 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		878827F62C6286D9000BE889 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		878827F82C62872C000BE889 /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
+		878F6BF52C6BCF71009CFCBC /* JavaScriptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptManager.swift; sourceTree = "<group>"; };
+		878F6BF72C6BD11F009CFCBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		878F6BF92C6BD47B009CFCBC /* CommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +118,10 @@
 		878827FD2C6290CD000BE889 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				878F6BF72C6BD11F009CFCBC /* Constants.swift */,
+				878F6BF92C6BD47B009CFCBC /* CommonUtil.swift */,
 				878827F82C62872C000BE889 /* AppDataManager.swift */,
+				878F6BF52C6BCF71009CFCBC /* JavaScriptManager.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -188,8 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878F6BF82C6BD11F009CFCBC /* Constants.swift in Sources */,
 				878827E42C6286AD000BE889 /* MainWebViewController.swift in Sources */,
+				878F6BFA2C6BD47B009CFCBC /* CommonUtil.swift in Sources */,
 				878827F72C6286D9000BE889 /* BaseViewController.swift in Sources */,
+				878F6BF62C6BCF71009CFCBC /* JavaScriptManager.swift in Sources */,
 				878827E02C6286AD000BE889 /* AppDelegate.swift in Sources */,
 				878827E22C6286AD000BE889 /* SceneDelegate.swift in Sources */,
 				878827F92C62872C000BE889 /* AppDataManager.swift in Sources */,

@@ -18,9 +18,11 @@ class MainWebViewController: BaseViewController {
         
         DeviceInfoTest()
         setupViews()
+        webViewInit()
+        javaScriptCommunication()
     }
     
-    func DeviceInfoTest(){
+    func DeviceInfoTest() {
         let deviceInfo = AppDataManager.shared
 
         print("앱 디스플레이 정보 : \(deviceInfo.getAppDisplayName())")
@@ -57,6 +59,68 @@ class MainWebViewController: BaseViewController {
             webView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
         ])
     }
+    
+    func webViewInit(){
+        webView.uiDelegate = self
+        WKWebsiteDataStore.default().removeData(ofTypes: [WKWebsiteDataTypeDiskCache, WKWebsiteDataTypeMemoryCache],
+                                                modifiedSince: Date(timeIntervalSince1970: 0)) {
+        }
+        
+        webView.allowsBackForwardNavigationGestures = true
+        
+        if let url = URL(string: Constants().webviewURL) {
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
+    }
+    
+    func javaScriptCommunication() {
+        JavaScriptManager.shared.evaluateJavaScript(script: "yourJavaScriptFunction()") { result, error in
+            if let error = error {
+                print("JavaScript execution failed: \(error)")
+            } else if let result = result {
+                print("JavaScript execution succeeded: \(result)")
+            }
+        }
+    }
 
 }
 
+extension MainWebViewController: WKUIDelegate{
+    
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+            completionHandler()
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+            completionHandler(true)
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default) { (action) in
+            completionHandler(false)
+        }
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        let alert = UIAlertController(title: "", message: prompt, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+            if let text = alert.textFields?.first?.text {
+                completionHandler(text)
+            } else {
+                completionHandler(defaultText)
+            }
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+}
