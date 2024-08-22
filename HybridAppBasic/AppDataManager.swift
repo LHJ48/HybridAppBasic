@@ -9,6 +9,7 @@ import UIKit
 import SystemConfiguration.CaptiveNetwork
 import CoreTelephony
 
+// 각종 앱데이터 수집
 final class AppDataManager {
     
     // 싱글턴 인스턴스

@@ -19,6 +19,7 @@
 		878F6BF62C6BCF71009CFCBC /* JavaScriptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6BF52C6BCF71009CFCBC /* JavaScriptManager.swift */; };
 		878F6BF82C6BD11F009CFCBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6BF72C6BD11F009CFCBC /* Constants.swift */; };
 		878F6BFA2C6BD47B009CFCBC /* CommonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6BF92C6BD47B009CFCBC /* CommonUtil.swift */; };
+		87BEBCB22C766FCC00B09578 /* InterfaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BEBCB12C766FCC00B09578 /* InterfaceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		878F6BF52C6BCF71009CFCBC /* JavaScriptManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptManager.swift; sourceTree = "<group>"; };
 		878F6BF72C6BD11F009CFCBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		878F6BF92C6BD47B009CFCBC /* CommonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtil.swift; sourceTree = "<group>"; };
+		87BEBCB12C766FCC00B09578 /* InterfaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				878F6BF92C6BD47B009CFCBC /* CommonUtil.swift */,
 				878827F82C62872C000BE889 /* AppDataManager.swift */,
 				878F6BF52C6BCF71009CFCBC /* JavaScriptManager.swift */,
+				87BEBCB12C766FCC00B09578 /* InterfaceManager.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				878F6BF82C6BD11F009CFCBC /* Constants.swift in Sources */,
+				87BEBCB22C766FCC00B09578 /* InterfaceManager.swift in Sources */,
 				878827E42C6286AD000BE889 /* MainWebViewController.swift in Sources */,
 				878F6BFA2C6BD47B009CFCBC /* CommonUtil.swift in Sources */,
 				878827F72C6286D9000BE889 /* BaseViewController.swift in Sources */,
@@ -364,6 +368,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +397,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
